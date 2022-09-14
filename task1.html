@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK</title>
+</head>
+
+<style>
+    body{
+     width: 100vw;
+     height: 100vh;
+     flex-direction: column;
+    }
+
+  .header{
+    background-color: rgba(160, 160, 149, 0.637);
+    }
+   
+  .left-section{
+    background-color: rgba(57, 131, 192, 0.699);
+    justify-content: center;
+    align-content: center;
+    height: 80vh;
+    flex-wrap: wrap;  
+    width: 30vh;
+    }
+
+  .main-content1{
+    background-color: burlywood;
+    justify-content: center;
+    width: 180vh;
+    height: 40vh;
+   }
+
+  .footer{
+
+    background-color: blue;
+    height: 15vh;
+   }
+   .main12 {
+    display: flex;
+   }
+   .two {
+    display: flex;
+    flex-direction:column;
+
+   }
+   </style>
+
+<script>
+    var count =0;
+    function addFunction(){
+        var x = document.querySelector("#testOut");
+        x.innerHTML= x.innerHTML+" <div>count " +count+ "</div>" ;
+        count++;
+    }
+    function clearr(){
+        var x = document.querySelector("#testOut");
+        x.innerHTML = "";
+        count = 0;
+    }
+</script>
+
+   <body>
+     <div class = "header">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    
+          <div class = "sub-header">
+            <div><button  onclick="addFunction()">Add</button>   <button onclick="clearr()">Clear</button></div>
+            <div class="sub" id="testOut">TEXT</div>
+           
+          </div>
+
+    </div>
+   <div class="main12">
+     <div class="left-section">  <p style="text-align: center;margin-top:250px ;"> left-section</p></div>
+     <div class="two">
+        <div class="main-content1"><p style="text-align: center;"> Main Content1</p> </div>
+        <div class="main-content1"> <p style="text-align: center;"> Main Content2</p></div>
+
+    </div>
+</div>
+    <div class="footer"> <p style="text-align: center;">footer</p> </div>
+</body>
+
+</html>
